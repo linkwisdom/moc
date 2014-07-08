@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "liandong liu"
+  },
+  "contacts": [
+    "liu@liandong.org"
+  ],
+  "name": "moc",
+  "description": "mockservice public version",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/linkwisdom/mockservice.git"
+  },
+  "keywords": [
+    "mock",
+    "mockJSON",
+    "mockservice"
+  ],
+  "bin": {
+    "mock": "./bin/mock"
+  },
+  "dependencies": {
+    "beef": ">=0.0.7"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "jasmine-node ./test/spec"
+  },
+  "license": "BSD",
+  "readmeFilename": "docs/README.md"
+}
