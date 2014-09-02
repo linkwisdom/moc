@@ -78,7 +78,12 @@ exports.getQueryPath = function (request) {
     // 如果未指定path, 以url.pathname作为path值
     if (!path) {
         // 删除请求后缀，如果有
-        path = request.pathname.replace(/\.\w{1,5}$/, '');
+        if (global.postfix) {
+            path = request.pathname;
+        } else {
+            path = request.pathname.replace(/\.\w{1,5}$/, '');
+        }
+
         // 删除前缀 `/`
         if (path.charAt(0) == '/') {
             path = path.substr(1);
