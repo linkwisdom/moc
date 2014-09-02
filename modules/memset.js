@@ -54,16 +54,18 @@ Memset.prototype = {
     },
     insert: function (docs) {
         if (Array.isArray(docs)) {
-            this.set.concat(docs);   
+            this.set = this.set.concat(docs);   
         } else if (docs) {
             this.set.push(docs);
         }
         return this.set.length;
     },
     clear: function () {
-        this.set = this.set.filter(function(item) {
-            return item;
-        });
+        this.set = this.set.filter(
+            function (item) {
+                return item;
+            }
+        );
     }
 };
 
