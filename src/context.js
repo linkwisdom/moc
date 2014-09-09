@@ -108,15 +108,19 @@ exports.getQueryPath = function (request) {
 exports.getQueryParam = function (request) {
     var query = request.query;
     var body = request.body;
+    var param = null;
 
-    // 支持param和params两种参数接口
-    var param = query.param || query.params ;
+console.log(body);
 
-    if (!param && body) {
-        param = body.param || body.params
+    if (body) {
+        param = body.param || body.params || body;
     }
 
-    return param || query || {};
+    if (!param && query) {
+        param = query.param || query.params || query;
+    }
+
+    return param || {};
 };
 
 /**

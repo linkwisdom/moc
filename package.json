@@ -7,7 +7,7 @@
   ],
   "name": "moc",
   "description": "mockservice public version",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "src/index.js",
   "repository": {
     "type": "git",
